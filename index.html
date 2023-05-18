@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <div class="row border mt-5 bg-light w-100 p-3">
+        <div class="col">
+            <label for="datepiker" class="ml-5">Date</label>
+            <input type="date" name="" id="dateField" onchange="displayDate()">
+            <label id="displayDateResponse"></label>
+        </div>
+        <div class="col container1">
+            <span class="text first-text">Hola,</span>
+            <span class="text second-text"></span>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col" style="margin-left:10px;">
+            <div>
+
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header" id="userName">Name</div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="designation">Designation</h5>
+                        <p class="card-text" id="description">Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <ul class="mt-5">
+                <li><a href="#" onclick="displayCard('anuj')">Anuj</a></li>
+                <li><a href="#" onclick="displayCard('kartik')">Karitk</a></li>
+                <li><a href="#" onclick="displayCard('kanhaiya')">Kanhaiya</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+// ==== Type-Writter ==== 
+const text = document.querySelector(".second-text");
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Developers";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Content Creators";
+  }, 4000);
+  setTimeout(() => {
+    text.textContent = "Freelancers";
+  }, 8000);
+}
+textLoad();
+setInterval(textLoad, 12000);
+</script>
