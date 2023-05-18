@@ -1,5 +1,7 @@
 body{
-    overflow: hidden;
+    /* height:100%; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .container1{

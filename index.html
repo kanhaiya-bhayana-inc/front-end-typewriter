@@ -35,11 +35,16 @@
                     <div class="card-header" id="userName">Name</div>
                     <div class="card-body">
                         <h5 class="card-title" id="designation">Designation</h5>
-                        <p class="card-text" id="description">Description</p>
+
+                        <p class="card-text description" id="description"></p>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col">
             <ul class="mt-5">
                 <li><a href="#" onclick="displayCard('anuj')">Anuj</a></li>
@@ -48,24 +53,40 @@
             </ul>
         </div>
     </div>
+    <div class="row p-5">
+        <p id="typing-container"></p>
+    </div>
 </body>
 
 </html>
 
 <script>
-// ==== Type-Writter ==== 
-const text = document.querySelector(".second-text");
-const textLoad = () => {
-  setTimeout(() => {
-    text.textContent = "Developers";
-  }, 0);
-  setTimeout(() => {
-    text.textContent = "Content Creators";
-  }, 4000);
-  setTimeout(() => {
-    text.textContent = "Freelancers";
-  }, 8000);
-}
-textLoad();
-setInterval(textLoad, 12000);
+    // ==== Type-Writter ==== 
+    const text = document.querySelector(".second-text");
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = "Developers";
+        }, 0);
+        setTimeout(() => {
+            text.textContent = "Content Creators";
+        }, 4000);
+        setTimeout(() => {
+            text.textContent = "Freelancers";
+        }, 8000);
+    }
+    textLoad();
+    setInterval(textLoad, 12000);
+    // const spanOutput = document.getElementById('typing-container');
+
+    // const txt = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt et nihil culpa, cupiditate eligendi veritatis nisi laudantium magnam recusandae libero voluptas sit unde laboriosam ab, debitis numquam dolores officia vel.`;
+    // let i = 0;
+    // const intervalID = setInterval(() => {
+    //     spanOutput.innerHTML += txt[i];
+    //     i++;
+
+    //     if (i === txt.length) {
+    //         clearInterval(intervalID);
+    //     }
+    // }, 50);
+
 </script>
